@@ -1,0 +1,28 @@
+<mat-toolbar color="primary" class="green-background">
+    <a mat-button class="menu-link" routerLink="/login" *ngIf="!authservice.isLoggedIn()">Register/Login</a>
+    <a mat-button class="menu-link" (click)="logout()" routerLink="/login" *ngIf="authservice.isLoggedIn()">Logout</a>
+    <span class="spacer"></span>
+    <a mat-button class="menu-link" routerLink="/">Home</a>
+    <span class="menu-separator"></span>
+    <a mat-button class="menu-link" routerLink="/">Quick Order View</a>
+    <span class="menu-separator"></span>
+    <a mat-button class="menu-link" routerLink="/">Order Status</a>
+    <span class="menu-separator"></span>
+    <a mat-button class="menu-link" routerLink="/">My Account</a>
+    <span class="menu-separator"></span>
+    <a mat-button class="menu-link" routerLink="/">View Cart</a>
+    <span class="menu-separator"></span>
+    <a mat-button class="menu-link" routerLink="/">Shop</a>
+    <span class="menu-separator"></span>
+    <a mat-button class="menu-link" routerLink="/">Contact Us</a>
+    <span class="spacer"></span>
+  </mat-toolbar>
+  <mat-toolbar color="primary" class="green-background">
+    <!-- Logo -->
+    <a href="/">
+        <img src="assets/logo.png" alt="Company Logo">
+      </a>
+      
+  </mat-toolbar>
+  
+  
