@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-9">
+      <mat-card>
+        <mat-card-title>Employment Verification Portal</mat-card-title><br />
+        <mat-card-content>
+          <form [formGroup]="verificationForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill">
+              <mat-label>Employee ID</mat-label>
+              <input matInput formControlName="employeeId">
+              <mat-error *ngIf="isInvalid('employeeId')">
+                <small *ngIf="verificationForm.get('employeeId')?.errors?.['required']">Employee Id is required.</small>
+                <small *ngIf="verificationForm.get('employeeId')?.errors?.['minlength']">Employee Id must be at least 3
+                  characters long and should be numeric</small>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Company Name</mat-label>
+              <input matInput formControlName="companyName">
+              <mat-error *ngIf="isInvalid('companyName')">
+                <small *ngIf="verificationForm.get('companyName')?.errors?.['required']">Company Name is
+                  required.</small>
+                <small *ngIf="verificationForm.get('companyName')?.errors?.['minlength']">Company Name must be at least
+                  3 characters long.</small>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Verification Code</mat-label>
+              <input matInput formControlName="verificationCode">
+              <mat-error *ngIf="isInvalid('verificationCode')">
+                <small *ngIf="verificationForm.get('verificationCode')?.errors?.['required']">Verification Code is
+                  required.</small>
+                <small *ngIf="verificationForm.get('verificationCode')?.errors?.['minlength']">Verification Code must be at least
+                  3 characters long.</small>
+              </mat-error>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit"
+              [disabled]="verificationForm.invalid">Verify</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+  </div>
+</div>

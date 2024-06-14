@@ -6,26 +6,26 @@
     background-color: #e0dfdf;
   }
   .menu-separator {
-    margin: 0 4px; /* Adjust the margin as needed */
+    margin: 0 4px; 
   }
   .menu-link {
-    color: #727272; /* Change this to the desired text color */
+    color: #727272; 
     text-decoration: none;
     font-size: 13px;
     font-family: Helvetica, Arial, sans-serif;
   }
 
   .menu-separator{
-    width: 1px; /* Adjust the width as needed */
-    height: 20px; /* Adjust the height as needed */
-    background-color: #727272; /* Adjust the color as needed */
-    margin: 0 10px; /* Adjust the margin as needed */
-    display: inline-block; /* Ensure the divider is inline with the links */
+    width: 1px; 
+    height: 20px;
+    background-color: #727272; 
+    margin: 0 10px; 
+    display: inline-block; 
   }
 
 
   .logo {
-    height: 40px; /* Adjust the height of the logo */
+    height: 40px; 
   }
   
   
@@ -35,7 +35,7 @@
   }
   
   .social-link:hover {
-    color: #727272; /* Change color on hover */
+    color: #727272; 
   }
   .mat-toolbar-row, .mat-toolbar-single-row{
     height: 50px;

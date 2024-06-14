@@ -12,14 +12,19 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './Home/home/home.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { EmploymentVerificationFormComponent } from './employment-verification-form/employment-verification-form.component';
+import { ApiInterceptorInterceptor } from './interceptor/api-interceptor.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    SidebarComponent,
+    EmploymentVerificationFormComponent
   ],
   imports: [
     BrowserModule,
@@ -27,12 +32,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatToolbarModule,
     ReactiveFormsModule,
-     MatInputModule,
+    MatInputModule,
     MatButtonModule,
     MatCardModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ApiInterceptorInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

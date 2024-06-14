@@ -8,7 +8,7 @@ import { tap, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private loginUrl = 'https://localhost:7075/api/User/login'; // Replace with your API endpoint
+  private loginUrl = 'https://localhost:7075/api/User/login'; 
 
   constructor(private http: HttpClient, private router: Router) {}
 
